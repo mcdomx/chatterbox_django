@@ -1,0 +1,165 @@
+/* Coolors Exported Palette - coolors.co/3d348b-7678ed-f7b801-f18701-f35b04 */
+/* HSL */
+header, footer {
+  padding: 15px 15px 50px 15px;
+  color: lightgrey;
+  background-color: #368ef2;
+}
+
+footer {
+  height: 6vh;
+}
+
+header {
+  font-size: 1.5em;
+  height: 3vh;
+}
+
+a {
+  color: lightgrey;
+}
+
+a:hover {
+  color: orange;
+  text-decoration: none;
+}
+
+p {
+  text-align: justify;
+  margin: 0px;
+}
+
+.card {
+  border-width: 3px;
+  border-color: white;
+  min-width: 14rem;
+}
+
+.card:hover {
+  border-width: 3px;
+  border-color: orange;
+}
+
+.card_element {
+  margin: 0px;
+}
+
+.card-header {
+  font-size: 110%;
+  font-weight: 900;
+  padding: 7px;
+  padding-left: 10px;
+  color: white;
+  background-color: darkblue;
+}
+
+input[type=text] {
+  margin-bottom: 5px;
+}
+
+#body_block, #frm_dispname {
+  margin-top: 13vh;
+  margin-bottom: 4vh;
+}
+
+#main_window {
+  height: 75vh;
+}
+
+#frm_dispname {
+  background-color: #368ef2;
+  color: lightgrey;
+  padding: 10px;
+}
+
+#chat_header3, #chat_header2, #chat_header1 {
+  padding: 5px;
+  font-size: 120%;
+  font-weight: 900;
+  color: white;
+  background-color: darkblue;
+}
+
+.self_chatbox {
+  background-color: #368ef2;
+  color: white;
+}
+
+.other_chatbox {
+  background-color: lightgrey;
+  color: black;
+}
+
+/* ANIMATIONS */
+@keyframes appear_card {
+  from {
+    height: 0px;
+    opacity: 0;
+  }
+  to {
+    height: 115px;
+    opacity: 1;
+  }
+}
+div[id$=cardappear] {
+  animation-name: appear_card;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes appear_post {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+    background-color: yellow;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+    background-color: default;
+  }
+}
+#newpost {
+  animation-name: appear_post;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
+@keyframes flash_card {
+  0% {
+    background-color: darkblue;
+  }
+  50% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: darkblue;
+  }
+}
+div[id$=cardflash] {
+  animation: flash_card 1s ease 1;
+  animation-play-state: paused;
+}
+
+@keyframes pulse_card {
+  0% {
+    border-color: white;
+  }
+  50% {
+    border-color: red;
+  }
+  100% {
+    border-color: white;
+  }
+}
+div[id$=cardpulse] {
+  animation: pulse_card 2.5s infinite;
+  animation-play-state: paused;
+}
+
+/*# sourceMappingURL=CSS_project2.css.map */

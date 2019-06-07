@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Chatterbox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=1">
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS_project2.css') }}">
+    <script src="{{ url_for('static', filename='project2.js') }}"></script>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="row justify-content-center fixed-top">
+      <section class="col-6"><a href="{{ url_for('index') }}">Chatterbox</a></section>
+      <section class="col-6" align="right">
+        <!-- If display name has been set in location storage... -->
+        <div hidden id="txt_dispname"></div>
+      </section>
+    </header>
+    <!-- end HEADER -->
+
+    <!-- BODY BLOCK - WHEN NOT REGISTERED -->
+    <!-- If no display name has been set in local storage-->
+    <div class="container col-4 form-group" id="register_block">
+      <form id="frm_dispname" >
+        <h5>Create a display name to continue.</h5>
+        <input type="text" id="txtinput_dispname" autocomplete="off" autofocus placeholder="enter display name">
+        <button type="submit" id="btn_dispname" disabled=true>Set</button>
+      </form>
+    </div> <!-- END CONTAINER -->
+    <!-- END BODY BLOCK - WHEN NOT REGISTERED -->
+
+
+    <!-- BODY BLOCK - WHEN REGISTERED -->
+    <div hidden id="body_block" class="container-fluid"> <!-- MAIN WINDOW -->
+      <div id="main_window" class="row"> <!-- MAIN WINDOW ROW -->
+          <div class="border border-primary mx-2" style="min-width: 16rem"> <!-- LEFT COLUMN - CHANNELS -->
+
+            <!-- ADD NEW CHANNEL INPUT BOX -->
+            <div class="row">
+              <div id="frm_add_channel" class="mx-auto">
+                <div class="input-group mb-3">
+
+                  <input type="text" id="txt_add_channel" class="form-control" placeholder="add channel name ...">
+                  <div class="input-group-append">
+                    <button type="button" id="btn_add_channel" class="btn btn-success">Add</button>
+                  </div>
+                </div> <!-- END INPUT GROUP -->
+            </div> <!-- end form -->
+            </div> <!-- END ROW -->
+            <!-- END - ADD NEW CHANNEL INPUT BOX -->
+
+              <!-- CHANNEL LISTING -->
+              <div id="channel_listing" style="overflow: scroll; height:65vh;">
+              </div>
+              <!-- END CARD-GROUP for CHANNEL_LISTING-->
+
+          </div> <!-- LEFT COLUMN - CHANNELS -->
+
+        <!-- CHAT BOX COLUMN -->
+        <div class="container border border-primary ml-1 mr-0" style="min-width: 20rem; max-width: 50rem"> <!-- RIGHT COLUMN - CHAT -->
+
+            <!-- CHAT HEADER -->
+            <div class="container mb-2 border-bottom">
+              <div class="row mx-2 mt-4 mb-2">
+                <div id="chat_header1" class="col-5 rounded">
+                  <div>Channel:</div>
+                  <div id="header_chname"></div>
+                </div>
+                <div id="chat_header2" class="col-3 rounded mx-1">
+                  <div>Posts:</div>
+                  <div id="header_posts"></div>
+                </div>
+                <div id="chat_header3" class="col-3 rounded">
+                  <div>Last Post:</div>
+                  <div id="header_last"></div>
+                </div>
+              </div> <!-- end row for chat header -->
+            </div> <!-- end container for chat header -->
+            <!-- END CHAT HEADER -->
+
+            <!-- ROW FOR ALL CHAT ELEMENTS -->
+            <!-- <div class"row">  -->
+              <div id="chat_listing" class="container mb-2" style="overflow: scroll; height:55vh;">
+              </div>
+            <!-- </div>  -->
+            <!-- ROW FOR ALL CHAT ELEMENTS -->
+
+          <!-- ROW FOR CHAT POST -->
+          <div class="row">
+            <div class="col align-self-end">
+              <div id="frm_add_post">
+                <div class="input-group mb-3">
+                  <input type="text" id="txt_add_post" class="form-control" placeholder="add message ... ">
+                  <div class="input-group-append">
+                    <button type="button" id="btn_add_post" class="btn btn-success">Post</button>
+                  </div>
+                </div> <!-- END INPUT GROUP -->
+              </div> <!-- end form -->
+            </div> <!-- end col for chat post -->
+          </div> <!-- END ROW FOR CHAT POST -->
+
+        </div> <!-- end chat column container -->
+
+      </div> <!-- end main window -->
+    </div> <!-- end body block -->
+    <!-- END BODY BLOCK WHEN REGISTERED -->
+
+    <!-- FOOTER -->
+    <footer class="row justify-content-left fixed-bottom">
+      <section class="col-3">created by Mark McDonald</section>
+    </footer>
+    <!-- end FOOTER -->
+
+  </body>
+
+</html>

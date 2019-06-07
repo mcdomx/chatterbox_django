@@ -1,0 +1,221 @@
+//SASS SCSS Color Variables
+
+/* Coolors Exported Palette - coolors.co/3d348b-7678ed-f7b801-f18701-f35b04 */
+/* HSL */
+$color1: hsla(354%, 67%, 52%, 1);
+$color2: hsla(212%, 88%, 58%, 1);
+$color3: hsla(22%, 100%, 60%, 1);
+$color4: hsla(250%, 39%, 45%, 1);
+$color5: hsla(124%, 45%, 38%, 1);
+$color_text: lightgrey;
+
+$color_background: $color2;
+$color_font: $color_text;
+$color_background_login: $color2;
+$color_chat1: white;
+$color_chat2: $color_background;
+$color_chat3: black;
+$color_chat4: lightgrey;
+//END SASS CSCC Color Varaibles
+
+
+//HEADER FOOTER Inheritance
+
+%header_footer_size {
+  padding: 15px 15px 50px 15px;
+  color: $color_font;
+  background-color: $color_background;
+}
+
+footer {
+  @extend %header_footer_size;
+  height: 6vh;
+}
+
+header {
+  @extend %header_footer_size;
+  font-size: 1.5em;
+  height: 3vh;
+}
+
+//END HEADER AND FOOTER
+
+
+
+
+a {
+  color: $color_text;
+}
+
+a:hover {
+  color: orange;
+  text-decoration: none;
+}
+
+
+p {
+  text-align: justify;
+  margin: 0px;
+}
+
+.card {
+  border-width: 3px;
+  border-color: white;
+  min-width: 14rem;
+}
+
+.card:hover{
+  border-width: 3px;
+  border-color: orange;
+}
+
+.card_element {
+  margin: 0px;
+}
+
+.card-header {
+  font-size: 110%;
+  font-weight: 900;
+  padding: 7px;
+  padding-left: 10px;
+  color: white;
+  background-color: darkblue;
+}
+
+//Creates margins between specifc form elements
+input[type=text]{
+  margin-bottom: 5px;
+ }
+
+#body_block, #frm_dispname {
+  margin-top: 13vh;
+  margin-bottom: 4vh;
+}
+
+#main_window {
+  height:75vh;
+}
+
+#frm_dispname {
+  background-color: $color_background_login;
+  color: $color_font;
+  padding: 10px;
+}
+
+%chat_header_items {
+  padding: 5px;
+  font-size: 120%;
+  font-weight: 900;
+  color: white;
+  background-color: darkblue;
+}
+
+#chat_header1 {
+  @extend %chat_header_items;
+}
+
+#chat_header2 {
+  @extend %chat_header_items;
+}
+
+#chat_header3 {
+  @extend %chat_header_items;
+}
+
+
+.self_chatbox {
+  background-color: $color_chat2;
+  color: $color_chat1;
+}
+
+.other_chatbox {
+  background-color: $color_chat4;
+  color: $color_chat3;
+}
+
+
+
+/* ANIMATIONS */
+// animation to make new channel card appear
+@keyframes appear_card {
+    from {
+        height: 0px;
+        opacity: 0;
+    }
+    to {
+        height: 115px;
+        opacity: 1;
+    }
+}
+
+div[id$='cardappear'] {
+    animation-name: appear_card;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+// end animation to show new channel card
+
+// animation to show a new post in active window
+@keyframes appear_post {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: .5;
+      background-color: yellow;
+    }
+    75% {
+      opacity: .75;
+
+    }
+    100% {
+      opacity: 1;
+      background-color: default;
+    }
+}
+
+#newpost {
+    animation-name: appear_post;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+}
+// end animatino to show new post
+
+// animation to highlight new post to channel
+@keyframes flash_card {
+    0% {
+      background-color: darkblue;
+    }
+    50% {
+      background-color: yellow;
+    }
+    100% {
+      background-color: darkblue;
+    }
+} // end flash_card
+
+div[id$='cardflash'] {
+    animation: flash_card 1s ease 1;
+    animation-play-state: paused;
+}
+// end new channel post animation
+
+// animation for active card pulsing
+@keyframes pulse_card {
+    0% {
+      border-color: white;
+    }
+    50% {
+      border-color: red;
+    }
+    100% {
+      border-color: white;
+    }
+} // end pulse_card
+
+div[id$='cardpulse'] {
+    animation: pulse_card 2.5s infinite;
+    animation-play-state: paused;
+}
+// end animation for active card
