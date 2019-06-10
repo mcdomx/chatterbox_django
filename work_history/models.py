@@ -1,7 +1,5 @@
 from django.db import models
 
-# Create your models here.
-
 
 class Job(models.Model):
     image = models.ImageField(upload_to='images/')
@@ -19,6 +17,6 @@ class Education(models.Model):
     summary = models.CharField(max_length=128)
 
 
-class Skills(model.Model):
+class Skill(models.Model):
     category = models.CharField(max_length=16)
     summary = models.CharField(max_length=32)

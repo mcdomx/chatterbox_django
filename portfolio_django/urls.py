@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+
 # Any route matching the first argument will be handled
 # by the second argument
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('chatterbox/', include("chatterbox.urls")),
+    path('workhistory/', include("work_history.urls")),
 ]
