@@ -1,0 +1,47 @@
+SUMMARY
+This site will represent my resume and a few portfolio projects.
+
+The main page will include my resume in HTML for with a PDF downloadable version.
+
+Projects can be selected from the menu and will open a summary page for the project.
+A link on the project page will open the project or show the project's results.  A
+link to the GitHub page for project will also be presented.
+
+Coursework and skills will be a menu item that will include course taken at Harvard
+as well as a list of skills.
+
+DETAILS
+The site will be built using Django.  Sub-sites will be built for each project.
+The main landing page will be the work_history sub-project.  Work_history will include
+resume, coursework and skills as well as personal introduction and objectives.
+
+The entire site is intended to be packaged as a docker container that will be
+published publicly.
+
+EXECUTION
+Set 'django' environment
+Start Postgres
+Navigate to root
+CLI:
+    python manage.py runserver
+
+
+ENVIRONMENT
+The site is intended to be run in anaconda environment 'django'
+
+PROJECTS
+Chatterbox
+Pong
+PathFinder
+
+
+
+DATABASE
+port: 5432
+name: portfoliodb
+pw: temp_password
+In postgress, dbl click the postgre db.
+set password:
+    \password postgres
+create new db:
+    CREATE DATABASE portfoliodb;

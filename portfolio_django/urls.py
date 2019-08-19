@@ -23,4 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('chatterbox/', include("chatterbox.urls")),
     path('workhistory/', include("work_history.urls")),
+    path('', include("work_history.urls")),
 ]
