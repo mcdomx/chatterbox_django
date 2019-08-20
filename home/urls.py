@@ -5,5 +5,6 @@ from . import views
 # by the second argument
 
 urlpatterns = [
-    path('', views.index, name="work_history"),
+    path('', views.index, name="home"),
+    path('resume/', views.resume, name="resume"),
 ]

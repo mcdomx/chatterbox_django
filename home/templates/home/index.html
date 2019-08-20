@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Work History</title>
+    <title>Mark McDonald</title>
 </head>
 
 <body>
@@ -24,7 +24,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Mark McDonald Work History">
+    <meta name="description" content="Mark McDonald Professional Overview">
     <meta name="author" content="Mark McDonald">
     <title>Mark McDonald · Work History</title>
 
@@ -51,7 +51,7 @@
       }
     </style>
     <!-- Custom styles for this template -->
-      <link rel="stylesheet" href="{% static 'work_history/work_history.css' %}" />
+      <link rel="stylesheet" href="{% static 'home/home.css' %}" />
   </head>
   <body>
     <header>
@@ -63,19 +63,23 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link disabled" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="resume">Resume</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="mailto:mark.mcdonald1@icloud.com">Contact</a>
+        </li>
+        <!-- <li class="nav-item">
           <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
+        </li> -->
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
+      <!-- <form class="form-inline mt-2 mt-md-0">
         <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+      </form> -->
+      <a class="my-2 my-sm-0" href="mailto:mark.mcdonald1@icloud.com">mark.mcdonald1@icloud.com</a>
     </div>
   </nav>
 </header>
@@ -94,8 +98,8 @@
         <div class="container">
           <div class="carousel-caption text-left">
             <h1>Balanced Experience</h1>
-            <p>Corporate Financial Management.  Mergers & Acquisitions.  Business Models: Manufacturing, Engineering, Spares & Service.</p>
-            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+            <p>Corporate Financial Management  //  Mergers & Acquisitions  //  Information Technology</p>
+            <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p> -->
           </div>
         </div>
       </div>
@@ -104,8 +108,8 @@
         <div class="container">
           <div class="carousel-caption">
             <h1>Technology Passion</h1>
-            <p>Starting with BASIC in grade school, I have used technology in my various aspects of my professional and personal life to improve quality and performance.</p>
-            <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+            <p>Technology assisted solutions to improve business performance.</p>
+            <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p> -->
           </div>
         </div>
       </div>
@@ -114,8 +118,8 @@
         <div class="container">
           <div class="carousel-caption text-right">
             <h1>Leadership</h1>
-            <p>Sole project leadership of 100+ member project teams; financial leadership for multi-location manufacturing and service business;  CIO of 500+ employee company.  Experienced and comfortable with the responsibility for leading projects and organizations.</p>
-            <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+            <p>Large (100+) project teams // business unit financial leadership //  CIO of 500+ employee company  // Comfortable with the responsibility of leading projects and organizations.</p>
+            <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p> -->
           </div>
         </div>
       </div>
@@ -140,22 +144,28 @@
     <!-- Three columns of text below the carousel -->
     <div class="row">
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-        <h2>Harvard Extension Masters in Software Engineering</h2>
-        <p>Coursework including focus on deep learing......</p>
+        <img src="{% static 'images/harvard_shield_wreath.png' %}" class="rounded mx-auto d-block" width="140" height="140" alt="Harvard Shield" />
+        <h2>Harvard Extension / Software Engineering</h2>
+        <div class="tagline_row">
+          <p>Certificate in data science with coursework target towards computer vision problems.</p>
+        </div>
         <p><a class="btn btn-secondary" href="#" role="button">Review Coursework &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        <img src="{% static 'images/digital_circuit.jpg' %}" class="rounded mx-auto d-block" width="140" height="140" alt="Projects" />
         <h2>Example Projects</h2>
-        <p>Deep learning models to find a navigable path in a video sequence.  No-frills chat application, ...</p>
+        <div class="tagline_row">
+          <p>Deep learning models to find a navigable path in a video sequence.  No-frills chat application.  Image Collection Network of Raspberry Pi's</p>
+        </div>
         <p><a class="btn btn-secondary" href="#" role="button">See Project Examples &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        <img src="{% static 'images/gears.png' %}" class="rounded mx-auto d-block" width="140" height="140" alt="Projects" />
         <h2>Business Experience</h2>
-        <p>Career focused on corporate financial management with a focus on systems implementations.  Roles include IT leadership as well as Mergers and Acquisitions project work.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        <div class="tagline_row">
+          <p>Broad business experience:  Director of Finance at Large Equipment Manufacturer.  Global Mergers & Acquisitions.  Project Management.  Work Abroad.  Systems Implementations.  CIO.</p>
+        </div>
+        <p><a class="btn btn-secondary" href="resume/" role="button">View Resume &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
 
@@ -166,11 +176,12 @@
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <h3 class="featurette-heading">Pathfinder</h3>
+        <h3 class="text-primary"> Off-road Navigation</h3>
+        <p class="lead">Using Keras and OpenCV, Pathfinder will highlight a navigable path on a video of off-road terrain.  The model was trained on a small set of publically available data that was augmented to produce a useful set of training data.</p>
       </div>
       <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="300" height="300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
       </div>
     </div>
 
@@ -178,11 +189,12 @@
 
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <h3 class="featurette-heading">RaspPi-Cam Data Collection</h3>
+        <h3 class="text-primary"> Platform for visual data collection</h3>
+        <p class="lead">This project uses a series of Raspberry Pi cameras in conjunction with Docker containers and ROS.  Cameras are networked and collect image data.  Images and identified and statictical data collected.</p>
       </div>
       <div class="col-md-5 order-md-1">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="300" height="300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
       </div>
     </div>
 
@@ -190,11 +202,12 @@
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <h3 class="featurette-heading">Chatterbox</h3>
+        <h3 class="text-primary"> A fun, no-frills, web-based, chat app</h3>
+        <p class="lead">A simple chat application demonstrating basic HTML, CSS, Flask and Internet messaging.</p>
       </div>
       <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="300" height="300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
       </div>
     </div>
 

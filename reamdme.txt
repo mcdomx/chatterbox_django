@@ -33,6 +33,7 @@ PROJECTS
 Chatterbox
 Pong
 PathFinder
+Raspy Image Data Collector
 
 
 
@@ -45,3 +46,14 @@ set password:
     \password postgres
 create new db:
     CREATE DATABASE portfoliodb;
+
+TODO:
+
+This site should be put on gitpages.  This will require me to de-django the existing pages, mostly templating statements.
+
+No database will be used.
+
+Use current Django platofrm until the site is 90% compelte.
+
+Update projects and clean them up.  Make project pages for them.  
+Create new github account for formal project portfolio.

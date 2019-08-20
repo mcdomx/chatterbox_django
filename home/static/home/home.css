@@ -1,3 +1,9 @@
+/*
+Primary CSS used by all templates in site.
+Use CSS under  /static/app_name/app_name.CSS for app specific CSS
+ */
+
+
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
@@ -15,6 +21,7 @@ body {
 /* Carousel base class */
 .carousel {
   margin-bottom: 4rem;
+  height: 15rem;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -24,14 +31,14 @@ body {
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
-  height: 32rem;
+  height: 15rem;
 }
 .carousel-item > img {
   position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 32rem;
+  height: 15rem;
 }
 
 
@@ -44,6 +51,7 @@ body {
   text-align: center;
 }
 .marketing h2 {
+  height: 5rem;
   font-weight: 400;
 }
 .marketing .col-lg-4 p {
@@ -51,6 +59,9 @@ body {
   margin-left: .75rem;
 }
 
+.marketing .tagline_row {
+  height: 8rem;
+}
 
 /* Featurettes
 ------------------------- */
@@ -88,4 +99,3 @@ body {
     margin-top: 7rem;
   }
 }
-
